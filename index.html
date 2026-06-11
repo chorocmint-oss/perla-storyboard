@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perla Storyboard Test</title>
+  <style>
+    :root {
+      --bg: #050505;
+      --paper: #0b0b0d;
+      --text: #f3eee6;
+      --muted: #b7aa96;
+      --gold: #d8bd7a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Noto Serif KR", "Apple SD Gothic Neo", serif;
+      word-break: keep-all;
+    }
+    main {
+      width: min(100%, 1080px);
+      margin: 0 auto;
+      background: #040404;
+      box-shadow: 0 0 80px rgba(0,0,0,.6);
+    }
+    .hero-spacer { height: 26vh; }
+    .panel {
+      width: 100%;
+      margin: 0;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .panel img,
+    .panel video {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .caption {
+      padding: clamp(88px, 13vw, 168px) clamp(32px, 7vw, 78px);
+      text-align: center;
+      font-size: clamp(24px, 4.8vw, 43px);
+      line-height: 1.85;
+      letter-spacing: -0.025em;
+      background: var(--bg);
+    }
+    .caption.small {
+      font-size: clamp(22px, 4.2vw, 36px);
+      color: var(--muted);
+    }
+    .caption .gold { color: var(--gold); }
+    .long-gap { height: clamp(220px, 38vw, 520px); background: var(--bg); }
+    .short-gap { height: clamp(84px, 16vw, 180px); background: var(--bg); }
+    .letter-panel {
+      min-height: 62vh;
+      display: grid;
+      place-items: center;
+      padding: 80px 34px;
+      background:
+        radial-gradient(circle at center, rgba(216,189,122,.13), transparent 32%),
+        linear-gradient(180deg, #070707 0%, #11100f 48%, #050505 100%);
+    }
+    .letter-box {
+      width: min(82%, 720px);
+      min-height: 330px;
+      border: 1px solid rgba(216,189,122,.34);
+      background: rgba(238,231,216,.06);
+      display: grid;
+      place-items: center;
+      padding: 64px 36px;
+      text-align: center;
+      font-size: clamp(27px, 5vw, 48px);
+      line-height: 1.8;
+      color: var(--text);
+      box-shadow: 0 24px 80px rgba(0,0,0,.55);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      background: #000;
+    }
+    .video-note {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      padding: 8px 12px;
+      color: rgba(243,238,230,.78);
+      background: rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.13);
+      font-size: 14px;
+      letter-spacing: -.02em;
+    }
+    footer {
+      padding: 120px 28px 180px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+      background: #030303;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero-spacer"></div>
+
+    <section class="caption">
+      그 시절, 페를라는 아직<br>
+      <span class="gold">호수와 꽃의 이름</span>으로 불렸다.
+    </section>
+
+    <section class="panel">
+      <img src="assets/lilia_reference.png" alt="은발 여성 참고 이미지 패널">
+    </section>
+
+    <section class="caption small">
+      세 사람은 오래도록<br>
+      이 평화가 계속될 줄 알았다.
+    </section>
+
+    <div class="long-gap"></div>
+
+    <section class="caption">
+      그날,<br>
+      제국의 평화는<br>
+      검은 마차에 실려 떠났다.
+    </section>
+
+    <section class="caption small">
+      카민은 막지 못했고,<br>
+      루벤은 붙잡지 못했다.
+    </section>
+
+    <section class="letter-panel">
+      <div class="letter-box">
+        편지는 오갔다.<br>
+        계절도 흘렀다.<br><br>
+        아무도 돌아오지 않았다.
+      </div>
+    </section>
+
+    <section class="caption">
+      열일곱의 카민은 처음으로<br>
+      릴리아를 돌려달라 청했다.<br><br>
+      답은 한 줄이었다.<br><br>
+      <span class="gold">불가.</span>
+    </section>
+
+    <section class="split">
+      <div class="panel">
+        <img src="assets/luben_reference.png" alt="금발 남성 참고 이미지 패널">
+      </div>
+    </section>
+
+    <section class="caption small">
+      한 사람은 황궁 안에서 칼을 숨겼고,<br>
+      한 사람은 거리 밑에서 칼이 되었다.
+    </section>
+
+    <section class="caption">
+      릴리아는 괜찮다고 웃었다.<br>
+      남겨진 사람들이 무너지지 않도록.
+    </section>
+
+    <section class="panel">
+      <video src="assets/lilia_goodbye_demo.mp4" autoplay muted loop playsinline preload="auto" poster="assets/lilia_reference.png"></video>
+      <div class="video-note">임시 영상 패널 · 실제 영상 파일로 교체 가능</div>
+    </section>
+
+    <section class="caption small">
+      그리고 얼굴이 보이지 않게 된 뒤에야,<br>
+      그 미소를 내려놓았다.
+    </section>
+
+    <div class="short-gap"></div>
+
+    <section class="letter-panel">
+      <div class="letter-box">
+        페를라는 그녀를 되찾았다.<br><br>
+        <span class="gold">너무 늦은 뒤에야.</span>
+      </div>
+    </section>
+
+    <footer>
+      테스트 페이지야. assets/lilia_goodbye_demo.mp4를<br>
+      누나가 만든 실제 영상 파일명으로 바꾸면 그대로 들어가.
+    </footer>
+  </main>
+</body>
+</html>
